@@ -1,2 +1,10 @@
-# focus-cert
-Scripts to update teacher certification fields and requirements in Focus SIS.
+# PAEC SDS Teacher In/Out-of-Field Scripts/activate
+These scripts are used to setup and enhance the Focus system for teacher in/out-of-field tracking. 
+
+1. Create Table PAEC_CCD_CERT_CODES (run first).sql - This file builds a table that helps translate codes in the Course Catalog Cert Reqs column in the out of field computed table and district reports. 
+2. Create Table PAEC_CERT_LOG_OPTIONS (run second).sql - This file builds a table that verifies the subject/code combinations entered on the User Logging field. It is also used in the computed table and district report.
+3. Update Teacher Certification Logging field options.sql - Many districts have not maintained the certification logging field select options. This uses the PAEC_CERT_LOG_OPTIONS table to add/update/deactivate codes and set sort orders.
+4. Teacher Cert Edit Rule.sql - This is the SQL for an edit rule you can add to Setup > Edit Rules & Workflow > Validation > User Fields to prevent entry of invalid subject/level combinations. 
+5. Parse CCD Certs to Catalog.sql - This SQL sets the CCD Cert Reqs column in the Focus Course Catalog to define the requirements for teacher certification of each course using the state CCD. 
+6. Out-of-field Teachers District Report.sql - This is ths SQL for a district report which shows who is out of field. The report can be used to meet the requirement of posting out of field teachers on the district website.
+7. OOF Computed Table.sql - This is the SQL for a computed table using the same logic as the District Report above but for an individual student. Districts can embed the computed field in their out-of-field letters.

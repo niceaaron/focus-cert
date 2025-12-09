@@ -1,0 +1,23 @@
+<CURRENT DATE>(This date must be NO earlier than Board approval of out-of-field teachers and no later than date certain of the survey period)
+
+ 
+
+Dear Parent(s)/Guardian(s) of <LAST, FIRST M>,
+
+At <SCHOOL NAME>, some teachers are undergoing continuing education to expand their certification for their current teaching assignment.
+
+As required by Florida Statute 1012.42(2), this letter is to inform you that on <BOARD APPROVAL DATE> the school board has appointed teachers for the <SCHOOL YEAR> school year to teach in an area outside their current teaching certification, field of study, subject area expertise, or require an additional certification endorsement. These out-of-field teachers assigned to instruct your child are:
+
+<OUT OF FIELD TEACHERS (COMPUTED)>
+
+Our teachers are actively working to obtain the necessary credentials, and we have full confidence in their ability to teach effectively.
+
+If you have any questions or concerns, please feel free to contact me.
+
+ 
+
+ 
+
+Sincerely,
+
+<PRINCIPAL>

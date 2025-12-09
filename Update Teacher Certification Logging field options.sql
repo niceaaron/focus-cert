@@ -65,7 +65,7 @@ from PAEC_CERT_LOG_OPTIONS pcsl
 where cfso.source_id = (select id from custom_field_log_columns cflc where column_name = 'LOG_FIELD1' 
 	and exists (select '' from custom_fields cf where cf.alias = 'teacher_certifications' and cf.id = cflc.field_id))
 and cfso.source_class = 'CustomFieldLogColumn'
-and cfso.code in ('0000','900', '901', '902','893','894','880', '209', '370',  '930','941', '799')
+and cfso.code in ('0000','900', '901', '902','893','894','880', '209', '370',  '930','941', '799','999')
 and cfso.deleted is null
 and cfso.max_syear is null
 and cfso.inactive is null;

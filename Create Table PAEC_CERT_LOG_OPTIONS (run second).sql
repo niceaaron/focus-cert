@@ -45,6 +45,9 @@ INSERT INTO PAEC_CERT_LOG_OPTIONS (description, label, code, level) VALUES
 ('English for Speakers of Other Languages (ESOL) Endorsement', 'ESOL', '1016', 'E'),
 ('English for Speakers of Other Languages (ESOL) K-12', 'ESOL', '1016', '6'),
 
+--Code for teachers who teach K12 and Dual Enrollment
+('Dual Enrollment', 'Dual Enrollment', '999', 'F'),
+
 -- rest of records
 ('Preschool Education (Birth – Age 4)', 'Preschool Education (Birth – Age 4)', '1042', 'L'),
 ('PreKindergarten/Primary Education PK-3', 'PreKindergarten/Primary Education PK-3', '1041', 'H'),

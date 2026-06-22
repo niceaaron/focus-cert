@@ -24,8 +24,13 @@ UPDATE master_courses SET certification_requirements = REGEXP_REPLACE(certificat
 UPDATE master_courses SET certification_requirements = REGEXP_REPLACE(certification_requirements, '(^| )930(?=\D|$)','\16930') WHERE syear = 2025;
 
 --VPK Cert requirements are a little wierd in the data file, this just standardizes those courses. 
-UPDATE master_courses SET certification_requirements = 'L1042, H1041, E1065, H940' WHERE syear = 2025 and substring(short_name,1,7) = '5100580';
-UPDATE master_courses SET certification_requirements = 'L1042, H1041, E1065, H940' WHERE syear = 2025 and substring(short_name,1,7) = '5100590';
+--added CDA code option H941 on 2026-06-22
+UPDATE master_courses SET certification_requirements = 'L1042, H1041, E1065, H940, H941' WHERE syear in (2025,2026) and substring(short_name,1,7) = '5100580';
+UPDATE master_courses SET certification_requirements = 'L1042, H1041, E1065, H940, H941' WHERE syear in (2025,2026) and substring(short_name,1,7) = '5100590';
+--added two more VPK courses 2026-06-22:
+UPDATE master_courses SET certification_requirements = 'L1042, H1041, E1065, H940, H941' WHERE syear in (2025,2026) and substring(short_name,1,7) = '5100570'; -- School Readiness
+UPDATE master_courses SET certification_requirements = 'L1042, H1041, E1065, H940, H941' WHERE syear in (2025,2026) and substring(short_name,1,7) = '5100620'; -- Summer Bridge
+
 
 --All of the 3 digit codes in Column A of the tab NWRDC Dual Certification are required to not have a level attached in the catalog in order to be evaluated correctly.
 --I used a simple excel formula to generate these queries: 
@@ -66,3 +71,10 @@ and syear = 2025
 and not exists (Select '' from course_code_directory ccd where ccd.course_year = '2025' 
 and ccd.course_year = master_courses.syear::varchar 
 and ccd.course_number = substring(master_courses.short_name,1,7));
+
+
+--set ELL flag for everything except post-secondary courses
+update master_courses
+SET ELL = 1
+where SUBSTRING(UPPER(short_name), 1,1) NOT BETWEEN 'A' AND 'Z'
+and syear in (2025,2026);

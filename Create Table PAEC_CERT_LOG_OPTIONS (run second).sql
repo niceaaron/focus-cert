@@ -24,6 +24,7 @@ INSERT INTO PAEC_CERT_LOG_OPTIONS (description, label, code, level) VALUES
 ('Licensed Occupational Therpay Assistant','Licensed Occupational Therpay Assistant', '894', '6'),
 ('Licensed School Psychologist','Licensed School Psychologist', '880', '6'),
 ('Licensed Audiologist','Licensed Audiologist', '209', '6'),
+('Speech-Language Pathology Assistant (SLPA)','Speech-Language Pathology Assistant (SLPA)', '218', '6'),
 ('Licensed Clinical Social Worker','Licensed Clinical Social Worker', '370', 'D'),
 ('Licensed Athletic Trainer',' Licensed Athletic Trainer', '930', '6'),
 ('Child Development Associate or Equivalent','Child Development Associate or Equivalent', '941', 'H'),

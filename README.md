@@ -8,3 +8,4 @@ These scripts are used to setup and enhance the Focus system for teacher in/out-
 5. Parse CCD Certs to Catalog.sql - This SQL sets the CCD Cert Reqs column in the Focus Course Catalog to define the requirements for teacher certification of each course using the state CCD. 
 6. Out-of-field Teachers District Report.sql - This is ths SQL for a district report which shows who is out of field. The report can be used to meet the requirement of posting out of field teachers on the district website.
 7. OOF Computed Table.sql - This is the SQL for a computed table using the same logic as the District Report above but for an individual student. Districts can embed the computed field in their out-of-field letters.
+8. Scheduled with an OOF teacher computed field.sql - This SQL can be used for a Computed Field that sets to Y when a student is scheduled with an OOF teacher. 
